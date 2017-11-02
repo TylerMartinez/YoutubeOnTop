@@ -1,0 +1,58 @@
+#moveArea{
+    height: 32px;
+    width: 32px;
+    -webkit-app-region: drag;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+
+#closeButton{
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    position: relative;
+    left: 10;
+}
+
+#videoInput{
+    display: inline-block;
+    position: relative;
+    margin-left: 15px;
+    bottom: 10px;
+    background-color: #000000;
+    border-style: solid;
+    color:#ffffff;
+    border-color: #ffffff; 
+    line-height: 25px;
+    width: 200px;
+}
+
+.control{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.controlArea{
+    height: 50px;
+    width: 100vw;
+    position: absolute;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}

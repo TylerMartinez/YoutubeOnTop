@@ -1,0 +1,18 @@
+<div class="controlArea" 
+  (mouseenter) = "onControlAreaEnter()"
+  (mouseleave) = "onControlAreaLeave($event)"
+  #controlArea>
+  <div class="controlArea" *ngIf="controlsVisible">
+    <button id="closeButton" class="control" (click) = "onCloseClick()">
+        <img src="assets/Icons/close.png" height="32" width="32"/>
+    </button>
+    <div id="moveArea" class="control">
+      <img src="assets/Icons/move.png" height="35" width="35"/>
+    </div>
+    <input id="videoInput" 
+            class="control" 
+            #videoInput
+            placeholder="Crtl-V URL here and press enter"
+            (keyup.enter)="onVideoEnter(videoInput.value)"> 
+  </div>
+</div>

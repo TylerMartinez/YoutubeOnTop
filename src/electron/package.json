@@ -1,0 +1,9 @@
+{
+    "name": "YTOT",
+    "productName": "YTOT",
+    "version": "0.1.0",
+    "main": "electron.js",
+    "devDependencies": {
+        "electron": "^1.7.9"
+        }    
+}

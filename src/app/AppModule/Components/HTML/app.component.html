@@ -1,0 +1,12 @@
+<app-toolbar-ui
+  (idEntered)="onIdEntered($event)">
+</app-toolbar-ui>
+
+<app-youtube-player
+  #youtubeComponent
+  [(videoId)]="id"
+  (ready)="savePlayer($event)"
+  (change)="onStateChange($event)"
+  (window:resize)="onResize($event)"
+>
+</app-youtube-player>
