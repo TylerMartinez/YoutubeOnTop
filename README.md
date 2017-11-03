@@ -2,6 +2,9 @@
 
 This is project I decided to work on when another on top player for youtube becasme compromised. This application opens a frameless window that stays on top of other windows so you can see the video playing while working.
 
+## Installation
+The Releases folder has finished packaged versions of the application. Grab the zip for your OS.
+
 ## Technologies
 
 This is built using the Angular4 framework and Electron.
