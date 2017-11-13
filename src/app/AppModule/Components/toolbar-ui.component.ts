@@ -20,6 +20,7 @@ export class ToolbarUIComponent {
 
   // Output members
   @Output() idEntered = new EventEmitter<string>();
+  @Output() listEntered = new EventEmitter<string>();
 
   // Constructor
   constructor() { }
@@ -44,6 +45,10 @@ export class ToolbarUIComponent {
     window.close();
   }
   onVideoEnter(value: string) {
-    this.idEntered.emit(value.split('v=')[1]);
+    if (value.indexOf('list=PL') >= 0) {
+      this.listEntered.emit(value.split('list=')[1]);
+    } else {
+      this.idEntered.emit(value.split('v=')[1]);
+    }
   }
 }

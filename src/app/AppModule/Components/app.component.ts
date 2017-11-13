@@ -33,6 +33,9 @@ export class AppComponent {
   onIdEntered(id: string) {
     this.youtubeComponent.playerService.playVideo(id, this.player);
   }
+  onListEntered(id: string) {
+    this.youtubeComponent.playerService.playList(id, this.player);
+  }
 
   // Helpers
   setFullScreen() {

@@ -56,6 +56,12 @@ export class YoutubeService {
         player.playVideo();
     }
 
+    playList(id: string, player: YT.Player) {
+        player.cuePlaylist({
+            list: id
+        });
+    }
+
     isPlaying (player: YT.Player) {
         const isPlayerReady: any = player && player.getPlayerState;
         const playerState = isPlayerReady ? player.getPlayerState() : {};
