@@ -30,11 +30,16 @@ export class AppComponent {
   onResize(event) {
     this.setFullScreen();
   }
-  onIdEntered(id: string) {
-    this.youtubeComponent.playerService.playVideo(id, this.player);
-  }
-  onListEntered(id: string) {
-    this.youtubeComponent.playerService.playList(id, this.player);
+  onUrlEntered(params: object[]) {
+    if (params[0]['type'] === 'list') {
+      if (params.length === 1) {
+        this.youtubeComponent.playerService.playList(params[0]['value'], this.player);
+      } else {
+        this.youtubeComponent.playerService.playListIndex(params[0]['value'], params[1]['value'], this.player);
+      }
+    } else {
+      this.youtubeComponent.playerService.playVideo(params[0]['value'], this.player);
+    }
   }
 
   // Helpers

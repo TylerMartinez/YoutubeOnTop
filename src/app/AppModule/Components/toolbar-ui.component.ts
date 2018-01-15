@@ -19,8 +19,7 @@ export class ToolbarUIComponent {
   @ViewChild('controlArea') controlArea: ElementRef;
 
   // Output members
-  @Output() idEntered = new EventEmitter<string>();
-  @Output() listEntered = new EventEmitter<string>();
+  @Output() urlEntered = new EventEmitter<object[]>();
 
   // Constructor
   constructor() { }
@@ -45,10 +44,37 @@ export class ToolbarUIComponent {
     window.close();
   }
   onVideoEnter(value: string) {
+    // parse out parameters
+    const params: object[] = [];
+    let param: string;
+
     if (value.indexOf('list=PL') >= 0) {
-      this.listEntered.emit(value.split('list=')[1]);
-    } else {
-      this.idEntered.emit(value.split('v=')[1]);
+      param = value.split('list=')[1];
+      params.push({
+          type: 'list',
+          value: param.split('&')[0]
+        }
+      );
+
+      if (value.indexOf('index=') >= 0) {
+        param = value.split('index=')[1];
+        params.push({
+            type: 'index',
+            value: param.split('&')[0]
+          }
+        );
+      }
+    } else if (value.indexOf('v=') >= 0) {
+      param = value.split('v=')[1];
+      params.push({
+          type: 'v',
+          value: param.split('&')[0]
+        }
+      );
+    }
+
+    if (params.length > 0) {
+      this.urlEntered.emit(params);
     }
   }
 }

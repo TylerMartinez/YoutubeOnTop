@@ -62,6 +62,13 @@ export class YoutubeService {
         });
     }
 
+    playListIndex(id: string, index: number, player: YT.Player) {
+        player.cuePlaylist({
+            list: id,
+            index: index
+        });
+    }
+
     isPlaying (player: YT.Player) {
         const isPlayerReady: any = player && player.getPlayerState;
         const playerState = isPlayerReady ? player.getPlayerState() : {};

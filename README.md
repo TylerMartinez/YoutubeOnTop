@@ -1,4 +1,4 @@
-# YTOT v0.2.0
+# YTOT v0.3.0
 
 This is project I decided to work on when another on top player for youtube becasme compromised. This application opens a frameless window that stays on top of other windows so you can see the video playing while working.
 
@@ -7,7 +7,7 @@ The Releases folder has finished packaged versions of the application. Grab the 
 
 ## Technologies
 
-This is built using the Angular4 framework and Electron.
+This is built using the Angular 5 framework and Electron.
 
 ## Releases
 
@@ -16,6 +16,8 @@ Releases of the full application are contained under the relases folder for Wind
 ## Finished Enhancements
 
 * Added playlist support
+* Added playlist index support
+* Upgraded to Angular 5
 
 ## Future Enhancements
 
