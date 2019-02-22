@@ -1,17 +1,13 @@
-# YTOT v0.3.0
+# YTOT v0.4.0
 
-This is project I decided to work on when another on top player for youtube becasme compromised. This application opens a frameless window that stays on top of other windows so you can see the video playing while working.
+This is project I decided to work on when another on top player for youtube becasme compromised. This application opens a frameless window that stays on top of other windows so you can see the video playing while working. Now updated for enhanced Mac support.
 
 ## Installation
-The Releases folder has finished packaged versions of the application. Grab the zip for your OS.
+Currently you have to pull the repository and build yourself, if anyone needs I can go back to providing compiled versions in the repository. Just let me know.
 
 ## Technologies
 
-This is built using the Angular 5 framework and Electron.
-
-## Releases
-
-Releases of the full application are contained under the relases folder for Windows, MacOS, and Linux.
+This is built using the Angular 7 framework and Electron.
 
 ## Finished Enhancements
 
@@ -21,7 +17,7 @@ Releases of the full application are contained under the relases folder for Wind
 
 ## Future Enhancements
 
-* HotKeys to dock to corners of current scree
+* HotKeys to dock to corners of current screen
 * Hotkey to hide the window
 * Twitch support if possible
 
