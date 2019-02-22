@@ -4,9 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/YTOT*
 
 # dependencies
 /node_modules
+/src/electron/node_modules
 
 # IDEs and editors
 /.idea
